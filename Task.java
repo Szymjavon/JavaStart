@@ -12,6 +12,7 @@ public class Task {
     static List<String> taski = new ArrayList<>();
     static String n;
     static Integer m;
+    static Integer c = taski.size();
     public static void main(String[] args) {
 
 
@@ -62,10 +63,10 @@ public class Task {
                 System.out.println("Wpisz index za ktory ma byc zamieniony (zaczynajac od 0)");
                 System.out.println(taski);
                 Integer m = si.nextInt();
-                if (m<=taski.size()) {
+                if (m<=c) {
                     taski.set(m, n);
                 }
-                else {
+                else if (m >= c){
                     System.out.println("Nie ma takiego taska");
                 }
 
